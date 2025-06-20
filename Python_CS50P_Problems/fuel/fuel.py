@@ -4,35 +4,23 @@ def main():
 
         try:
             num, denom = x.split("/")
-            if int(num) == 0:
+            num = int(num)
+            denom = int(denom)
+
+            if denom == 0 or num > denom:
+                continue
+
+            percentage = round((num / denom) * 100)
+
+            if percentage <= 1:
                 print("E")
-                break
-            elif int(num) / int(denom) * 100 == 1:
-                print("E")
-                break
-            elif int(num) / int(denom) * 100 == 99:
+            elif percentage >= 99:
                 print("F")
-                break
-            elif int(num) / int(denom) * 100 == 100:
-                print("F")
-                break
-            elif int(num) / int(denom) * 100 == 75:
-                print("75%")
-                break
-            elif round(int(num) / int(denom) * 100) == 67:
-                print("67%")
-                break
-            elif int(num) / int(denom) * 100 == 50:
-                print("50%")
-                break
-            elif round(int(num) / int(denom) * 100) == 33:
-                print("33%")
-                break
-            elif int(num) / int(denom) * 100 == 25:
-                print("25%")
-                break
-        except (ValueError, ZeroDivisionError) as e:
-            pass
+            else:
+                print(f"{percentage}%")
+            break
+        except (ValueError, ZeroDivisionError):
+            continue
 
 
 main()
