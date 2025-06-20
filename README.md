@@ -22,6 +22,7 @@ Proyek ini merupakan bagian dari proses belajar saya dalam memahami dasar-dasar 
 ---
 
 ## 📦 Struktur Folder
+```
 cs50p-python-projects/
 ├── camel/
 │ ├── camel.py
@@ -30,6 +31,7 @@ cs50p-python-projects/
 │ ├── fuel.py
 │ └── README.md
 └── ...
+```
 
 ---
 
